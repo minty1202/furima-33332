@@ -24,6 +24,9 @@ RSpec.describe User, type: :model do
 
     context '新規登録できないとき' do
       it 'nicknameが空では登録できない' do
+        @user.nickname = ''
+        @user.valid?
+        
       end
       it 'emailが空だと登録できない' do
       end
