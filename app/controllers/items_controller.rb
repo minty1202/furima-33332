@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :move_to_root, except: :index
+
   def index
     @items = Item.order('created_at DESC')
   end
@@ -19,7 +21,12 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :info, :category_id, :status_id, :fee_status_id, :prefecture_id, :delivery_id, :price,
-                                 :image).merge(user_id: current_user.id)
+    params.require(:item).permit(:name, :info, :category_id, :status_id, :fee_status_id, :prefecture_id, :delivery_id, :price,:image).merge(user_id: current_user.id)
+  end
+  
+  def move_to_root
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 end
