@@ -1,0 +1,21 @@
+ja:
+  activerecord:
+    models:
+      item: 商品 #これが大元
+    attributes:
+      item:
+        name: 商品名
+        info: 商品の説明
+        image: 商品画像
+        category_id: カテゴリー
+        delivery_id: 発送までの日数
+        fee_status_id: 配送料の負担
+        prefecture_id: 発送元の地域
+        status_id: 商品の状態
+        price: 価格
+    errors:
+      models:
+        item:
+          other_than: は空白以外にしてください
+          greater_than_or_equal_to: は300円から9,999,999円の間で設定してください
+          less_than_or_equal_to: は300円から9,999,999円の間で設定してください
