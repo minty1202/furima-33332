@@ -19,3 +19,4 @@ ja:
           other_than: は空白以外にしてください
           greater_than_or_equal_to: は300円から9,999,999円の間で設定してください
           less_than_or_equal_to: は300円から9,999,999円の間で設定してください
+          not_a_number: は半角数値で入力してください
