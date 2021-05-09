@@ -36,7 +36,6 @@ RSpec.describe Item, type: :model do
         expect(item.errors.full_messages).to include("#{Item.human_attribute_name(:price)}を入力してください")
       end
 
-
       it 'priceが半角英数混合では登録できない登録できない' do
         item.price = '300a'
         item.valid?
@@ -52,7 +51,6 @@ RSpec.describe Item, type: :model do
         item.valid?
         expect(item.errors.full_messages).to include("#{Item.human_attribute_name(:price)}は半角数値で入力してください")
       end
-
 
       it 'priceが300未満だと登録できない' do
         item.price = 299
