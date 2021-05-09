@@ -7,7 +7,7 @@ RSpec.describe User, type: :model do
 
   describe 'ユーザー新規登録' do
     context '新規登録できるとき' do
-      it 'nicknameとemail、passwordとpassword_confirmation、last_nameとlast_name_kana、first_nameとfirst_name_kana、birth_dayが存在すれば登録できる' do
+      it 'nicknameとemail、passwordとpassword_confirmation、last_nameとlast_name_kana、first_nameとfirst_name_kana、birth_dayがあれば登録できる' do
         expect(@user).to be_valid
       end
       it 'nicknameが2文字以上6文字以下であれば登録できる' do
