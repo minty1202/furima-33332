@@ -27,7 +27,7 @@
 
     <% if user_signed_in? %>
       <% if @item.user.id == current_user.id %>
-        <%= link_to "商品の編集", "#", method: :get, class: "item-red-btn" %>
+        <%= link_to @item.info, "#", method: :get, class: "item-red-btn" %>
         <p class="or-text">or</p>
         <%= link_to "削除", "#", method: :delete, class:"item-destroy" %>
 
@@ -40,7 +40,7 @@
     <% end %>
 
     <div class="item-explain-box">
-      <span><%= "商品説明" %></span>
+      <span><%= @item.info %></span>
     </div>
     <table class="detail-table">
       <tbody>
