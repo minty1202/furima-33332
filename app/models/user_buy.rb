@@ -11,7 +11,6 @@ class UserBuy
     validates :phone_number, numericality: { only_integer: true }, length: { maximum: 11 }
     validates :token, presence: true
     validates :item_id
-    validates :order_id
   end
 
   def save
