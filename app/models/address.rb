@@ -7,7 +7,7 @@ class Address < ApplicationRecord
     validates :prefecture
     validates :city
     validates :addresses
-    validates :phone_number, numericality: {only_integer: true}, length: { maximum: 11 }
+    validates :phone_number, numericality: { only_integer: true }, length: { maximum: 11 }
   end
 
   belongs_to :prefecture
