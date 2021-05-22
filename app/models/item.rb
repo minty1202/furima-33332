@@ -15,6 +15,7 @@ class Item < ApplicationRecord
     end
   end
 
+  has_one :order
   belongs_to :category
   belongs_to :status
   belongs_to :fee_status
