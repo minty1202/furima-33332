@@ -56,6 +56,6 @@ class ItemsController < ApplicationController
   end
 
   def order_no_seller
-    redirect_to root_path if @item.user.id == current_user.id
+    redirect_to root_path if @item.order
   end
 end

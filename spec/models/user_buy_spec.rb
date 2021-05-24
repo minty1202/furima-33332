@@ -71,7 +71,7 @@ RSpec.describe User, type: :model do
         expect(@buy.errors.full_messages).to include('Itemを入力してください')
       end
       it 'prefecture_idが1だと登録できない' do
-        @buy.prefecture_id = '1'
+        @buy.prefecture_id = 1
         @buy.valid?
         expect(@buy.errors.full_messages).to include('Prefectureは1以外の値にしてください')
       end
