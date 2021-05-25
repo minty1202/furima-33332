@@ -31,3 +31,5 @@ yarn-debug.log*
 .yarn-integrity
 .Ds_Store
 /vendor/bundle
+
+.env
