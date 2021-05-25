@@ -1,7 +1,7 @@
 class UserBuy
   include ActiveModel::Model
   extend ActiveHash::Associations::ActiveRecordExtensions
-  attr_accessor :postal_code, :prefecture_id, :city, :addresses, :phone_number, :building, :order_id, :user_id, :item_id, :token
+  attr_accessor :postal_code, :prefecture_id, :city, :addresses, :phone_number, :building, :user_id, :item_id, :token
 
   with_options presence: true do
     validates :postal_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/ }
