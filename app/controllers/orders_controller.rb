@@ -1,8 +1,8 @@
 class OrdersController < ApplicationController
-  before_action :find_item
-  before_action :order_check
-  before_action :authenticate_user!
-  before_action :order_no_seller
+  before_action :find_item, only: [:index, :create]
+  before_action :order_check, only: [:index, :create]
+  before_action :authenticate_user!, only: [:index, :create]
+  before_action :order_no_seller, only: [:index, :create]
 
   def index
     @user_buy = UserBuy.new
@@ -42,7 +42,7 @@ class OrdersController < ApplicationController
   end
 
   def order_check
-    redirect_to root_path if @item.order
+    redirect_to root_path if @item.order.present?
   end
 
   def order_no_seller

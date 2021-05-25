@@ -56,6 +56,6 @@ class ItemsController < ApplicationController
   end
 
   def order_no_seller
-    redirect_to root_path if @item.order
+    redirect_to root_path if @item.order.prsent?
   end
 end
